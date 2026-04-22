@@ -57,3 +57,9 @@ print(classification_report(y_test, predictions))
 - `predict_svm_scores(X_test, path)` — Get decision function scores
 
 ---
+# Final Scores
+
+| Dataset | Model | Best params | Macro Avg F1-Score | Notes | Time |
+| :--- | :--- | :--- | :--- | :--- |:--- |
+| test | Majority Class (Baseline) |  | 0.36170 | grounding | 0.3s |
+| test| kernel SVM (RBF) | C=100, gamma: scale | 0.93  | best SVM | 1m 39s |
