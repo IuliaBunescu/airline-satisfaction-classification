@@ -1,2 +1,59 @@
 # airline-satisfaction-classification
 https://www.kaggle.com/datasets/teejmahal20/airline-passenger-satisfaction
+
+---
+
+## SVM Model
+
+### Required Imports
+
+```python
+import pandas as pd
+import joblib
+from sklearn.metrics import f1_score, accuracy_score, classification_report, confusion_matrix
+```
+
+### Required Features
+
+Your test data must contain these columns:
+- `Class`
+- `Inflight wifi service`
+- `Online boarding`
+- `Inflight entertainment`
+- `On-board service`
+- `Type of Travel`
+
+### Setup
+
+```python
+X_test = test_df.drop(columns=["satisfaction", "id"])
+y_test = test_df["satisfaction"]
+```
+
+### Making Predictions
+
+**For class labels:**
+```python
+predictions = predict_svm(X_test)
+```
+
+**For decision scores (ensemble/stacking):**
+```python
+scores = predict_svm_scores(X_test)
+```
+
+### Evaluation
+
+```python
+print("Accuracy:", accuracy_score(y_test, predictions))
+print("F1 Macro:", f1_score(y_test, predictions, average="macro"))
+print(classification_report(y_test, predictions))
+```
+
+### Helper Functions
+
+- `load_svm_pipeline(path)` — Load the saved pipeline
+- `predict_svm(X_test, path)` — Get class predictions
+- `predict_svm_scores(X_test, path)` — Get decision function scores
+
+---
