@@ -59,7 +59,8 @@ print(classification_report(y_test, predictions))
 ---
 # Final Scores
 
-| Dataset | Model | Best params | Macro Avg F1-Score | Notes | Time |
+| Dataset | Model | Best params | Macro Avg F1-Score | Notes | Time (test-train) |
 | :--- | :--- | :--- | :--- | :--- |:--- |
 | test | Majority Class (Baseline) |  | 0.36170 | grounding | 0.3s |
-| test| kernel SVM (RBF) | C=100, gamma: scale | 0.93  | best SVM | 1m 39s |
+| test| kernel SVM (RBF) | C=100, gamma: scale | 0.9284  | best SVM | 1m 39s - 10m |
+| test| stacking |  | 0.9321  | placeholder, other models not ready | 1m - 12m|
