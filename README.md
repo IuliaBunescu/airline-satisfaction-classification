@@ -65,7 +65,7 @@ print(classification_report(y_test, predictions))
 | Dataset | Model | Best params | Macro Avg F1-Score | Notes | Time (test-train) |
 | :--- | :--- | :--- | :--- | :--- |:--- |
 | test | Majority Class (Baseline) |  | 0.36170 | grounding | 0.3s |
-| test| kernel SVM (RBF) | C=100, gamma: scale | 0.9284  | best SVM | 1m 39s - 10m 
+| test| kernel SVM (RBF) | C=100, gamma: scale | 0.9284  | 6 features | 1m 39s - 10m 
 | test | XGBoost (Tuned) | `n_estimators=200`, `max_depth=9`, `lr=0.05`, `subsample=0.8`, `colsample_bytree=0.8` | 0.9637 | Top 13 SHAP features | N/A |
 | test| Logistic Regression | max_iter=1000, solver='lbfgs' | 0.859  |  | N/A 
 | test | Stacking | Meta Mode: LR | 0.96261| | 11m |
