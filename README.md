@@ -70,3 +70,4 @@ print(classification_report(y_test, predictions))
 | test| Logistic Regression | max_iter=1000, solver='lbfgs' | 0.859  |  | N/A 
 | test | Stacking | Meta Mode: LR | 0.96261| | 11m |
 | test | Bagging (XGBoost) | `n_estimators=5`, Base: Tuned XGBoost | 0.9634 | Bagging Ensemble | N/A |
+| test | soft voting |Logistic Regression / XGB | 0.9577 |  | N/A |
