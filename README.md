@@ -66,4 +66,6 @@ print(classification_report(y_test, predictions))
 | :--- | :--- | :--- | :--- | :--- |:--- |
 | test | Majority Class (Baseline) |  | 0.36170 | grounding | 0.3s |
 | test| kernel SVM (RBF) | C=100, gamma: scale | 0.9284  | best SVM | 1m 39s - 10m 
+| test | XGBoost (Tuned) | `n_estimators=200`, `max_depth=9`, `lr=0.05`, `subsample=0.8`, `colsample_bytree=0.8` | 0.9637 | Top 13 SHAP features | N/A |
 | test | Stacking | Meta Mode: LR | 0.96261| | 11m |
+| test | Bagging (XGBoost) | `n_estimators=5`, Base: Tuned XGBoost | 0.9634 | Bagging Ensemble | N/A |
