@@ -1,5 +1,6 @@
 # airline-satisfaction-classification
 https://www.kaggle.com/datasets/teejmahal20/airline-passenger-satisfaction
+https://docs.google.com/presentation/d/1oRDDgLgQoRqdz-ynhFcY6gvp0A5aB5dX9N_sAqJYoHI/edit?usp=sharing
 
 ---
 
